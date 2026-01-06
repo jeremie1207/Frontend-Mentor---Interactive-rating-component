@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>interactive-rating-component-main</title>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <form class="rank_form" action="#">
+
+            <!--Decorative image -->
+            <img class="rank" 
+                 src="./images/icon-star.svg" 
+                 alt=""
+                 aria-hidden="true"
+            >
+
+            <section class="card_description">
+              <h1 class="card_title">
+                How did we do?
+              </h1>
+
+              <p class="card_description_text">
+                Please let us know how we did with your support request. All feedback is appreciated 
+                to help us improve our offering!
+              </p>
+
+              <fieldset 
+                class="card_rate__selector"
+                role="radiogroup"
+                aria-required="true"
+                aria-labelledby="rating-group-label"
+              >
+                <legend id="rating-group-label" class="visually-hidden">
+                  Select a rating from 1 to 5
+                </legend>               
+
+                <div class="card_rate__rank_group">
+                  <input  type="radio" name="rank"  value="1" id="rank-1">
+                  <label for="rank-1">1</label>
+                </div>
+                <div class="card_rate__rank_group">
+                  <input  type="radio" name="rank"  value="2" id="rank-2">
+                  <label for="rank-2">2</label>
+                </div>
+                <div class="card_rate__rank_group">
+                  <input  type="radio" name="rank"  value="3" id="rank-3">
+                  <label for="rank-3">3</label>
+                </div>
+                <div class="card_rate__rank_group">
+                  <input type="radio" name="rank"  value="4" id="rank-4">
+                  <label for="rank-4">4</label>
+                </div>
+                <div class="card_rate__rank_group">
+                  <input type="radio" name="rank"  value="5" id="rank-5">
+                  <label for="rank-5">5</label>
+                </div>
+              </fieldset>
+            </section>
+            <button class="btn btn-submit">Submit</button>
+        </form>
+
+        <section class="thanks" 
+                 hidden
+                 role="status"
+                 aria-live="polite"
+                 aria-label="thank-you-title">
+          <img class="illustration" 
+               src="./images/illustration-thank-you.svg" 
+               alt="Illustration showing a thank you message">
+          <p class="thanks_rank">
+            You selected
+            <span class="rank_value" aria-live="polite">1</span>
+            out of 5
+          </p>
+          
+          <h1 class="card_title">Thank you!</h1>
+          <p class="card__description">
+             We appreciate you taking the time to give a rating. If you ever need more support, 
+             don’t hesitate to get in touch!
+          </p>
+        </section>
+      </article>
+    </main>
+    <script type="module" src="../src/index.js"></script>
+  </body>
+</html>

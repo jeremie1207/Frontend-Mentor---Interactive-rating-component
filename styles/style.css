@@ -1,0 +1,163 @@
+:root {
+  --clr-white: hsl(0, 100%, 100%);
+  --clr-grey-500 : hsl(217, 12%, 63%);
+  --clr-grey-900 : hsl(213, 19%, 18%);
+  --clr-grey-950 : hsl(216, 12%, 8%);
+  --clr-primary :  hsl(25, 97%, 53%);
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  background-color: var(--clr-grey-950);
+  color: var(--clr-grey-500);
+}
+
+main {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.card {
+  background: linear-gradient(90deg, hsl(215, 20%, 17%), hsl(216, 24%, 12%));
+  width: 95%;
+  max-width: 25rem;
+  padding: 1.5rem;
+  border-radius: 22.5px;
+}
+
+@media (min-width: 23rem) {
+  .card {
+    padding-block: 2rem;
+  }
+}
+
+.rank_form > * + * {
+  margin-block-start: 1.5rem;
+}
+
+@media (min-width: 23rem) {
+  .rank_form > * + *  {
+    margin-block-start: 2rem;
+  }
+}
+
+.card_title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-white);
+}
+
+.card_description > * + *, .thanks > * + * {
+  margin-block-start: 1rem;
+}
+
+.card_rate__selector {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.card_rate__rank_group input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card_rate__rank_group input[type="radio"]:focus-visible + label {
+  outline: 3px solid #fc7614;
+  outline-offset: 2px;
+}
+
+label {
+  background-color: var(--clr-grey-900);
+  padding-block: 0.75rem;
+  padding-inline: 1.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+label:is(:focus, :hover) {
+  background-color: var(--clr-white);
+  color: var(--clr-grey-950);
+}
+
+label[data-state="active"] {
+  background-color: var(--clr-primary);
+  color: var(--clr-grey-950);
+}
+
+.btn {
+  display: inline-block;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 22.5px;
+}
+
+.btn-submit {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: var(--clr-primary);
+  border: 2px solid transparent;
+  letter-spacing: 1.87px;
+  line-height: 1.28;
+}
+
+.btn-submit:is(:hover){
+  background-color: var(--clr-white);
+}
+
+.thanks {
+  text-align: center;
+}
+
+.thanks div {
+  background-color: var(--clr-grey-900);
+  border-radius: 22.5px;
+  font-size: 14px;
+  margin-inline: auto;
+  inline-size: 50%;
+}
+
+.thanks_rank {
+  display: inline;
+  margin-block-end: 2rem;
+  font-weight: 100;
+  line-height: 1.6;
+  font-size: 15px;
+  border-radius: 22.5px;
+  background-color: var(--clr-grey-900);
+  color:var(--clr-primary);
+  padding: 0.5rem 1rem;
+}
+
+.display-none {
+  display: none;
+}
+
+.rank {
+  background-color: var(--clr-grey-900);
+  border-radius: 50%;
+  padding: 0.5rem 0.5rem;
+}
+
+.illustration {
+  margin-inline: auto;
+  margin-block-end: 2rem;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
