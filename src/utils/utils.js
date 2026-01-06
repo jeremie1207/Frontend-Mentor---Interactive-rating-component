@@ -1,4 +1,4 @@
-import { ranks, thanksState, form, rankValue } from "../constants/constant.js";
+import { ranks, thanksState, form, rankValue } from "../constants/constant";
 
 let rateValue;
 
@@ -33,3 +33,4 @@ export const rankHandler = rank => {
     rankValue.textContent = rateValue;
   });
 } 
+
